@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+mgilet_notifications:
+    resource: "@MgiletNotificationBundle/Controller/"
+    prefix: /notifications

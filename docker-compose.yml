@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+    db:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${DATABASE_NAME}
+            MYSQL_USER: ${DATABASE_USER}
+            MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+    php:
+        build:
+            context: docker/php7-fpm
+            args:
+                TIMEZONE: "Europe/Paris"
+        volumes:
+            - ./:/var/www/symfony
+    nginx:
+        build: docker/nginx
+        ports:
+            - 80:80
+        volumes_from:
+            - php

@@ -1,0 +1,6 @@
+twig:
+    paths:
+#      '%kernel.project_dir%/templates'
+      vendor/mgilet/notification-bundle/Resources/views: MgiletNotificationBundle
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'

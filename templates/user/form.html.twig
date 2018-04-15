@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Create / edit a user</h1>
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button type="submit">Save</button>
+    {{ form_end(form) }}
+{% endblock %}
