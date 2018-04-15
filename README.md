@@ -6,3 +6,4 @@ https://github.com/maximilienGilet/notification-bundle
 
 1. Configure the .env
 2. Start project with `docker-compose up`
+3. Install the dependencies with `docker-compose exec php composer install`
